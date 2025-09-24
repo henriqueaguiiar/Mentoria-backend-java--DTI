@@ -15,7 +15,7 @@ public class PersonResource {
 
     @GetMapping
     public String teste(){
-        return "teste";
+        return "teste: api";
     }
 
     @PostMapping
