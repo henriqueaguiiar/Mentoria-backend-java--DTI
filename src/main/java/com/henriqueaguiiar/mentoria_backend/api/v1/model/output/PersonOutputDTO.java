@@ -1,5 +1,6 @@
 package com.henriqueaguiiar.mentoria_backend.api.v1.model.output;
 
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -18,6 +19,7 @@ import java.util.UUID;
 @NoArgsConstructor
 @AllArgsConstructor
 public class PersonOutputDTO {
+
     private UUID id;
     private String name;
     private String surname;
