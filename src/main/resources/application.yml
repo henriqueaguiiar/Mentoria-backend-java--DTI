@@ -2,7 +2,7 @@ spring:
   application:
     name: mentoria-backend
   datasource:
-    url: jdbc:h2:mem:produtos
+    url: jdbc:h2:mem:person
     username: sa
     password: admin
   jpa:
