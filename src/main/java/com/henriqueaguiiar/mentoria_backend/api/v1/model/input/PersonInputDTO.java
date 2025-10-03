@@ -3,6 +3,8 @@ package com.henriqueaguiiar.mentoria_backend.api.v1.model.input;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.Date;
 import java.util.List;
@@ -14,6 +16,7 @@ import java.util.Objects;
  * Classe DTO para input de dados com POST
  */
 
+@NoArgsConstructor
 @AllArgsConstructor
 @Data
 public class PersonInputDTO {

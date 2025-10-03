@@ -1,9 +1,9 @@
 package com.henriqueaguiiar.mentoria_backend.api.v1.model.output;
 
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import com.github.f4b6a3.uuid.UuidCreator;
+import lombok.*;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.Date;
 import java.util.List;
@@ -18,9 +18,11 @@ import java.util.UUID;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
+@ToString
 public class PersonOutputDTO {
 
-    private UUID id;
+    @Setter(AccessLevel.PRIVATE)
+    private String id;
     private String name;
     private String surname;
     private Date bornDate;
@@ -36,8 +38,9 @@ public class PersonOutputDTO {
      * Construtor responsavel por instanciar um objeto com UUID.
      */
 
+    @Autowired
     public PersonOutputDTO(String name, String surname, Date bornDate, List<String> stack) {
-        this.id = id = UUID.randomUUID();
+        this.id = id = UuidCreator.getTimeOrderedEpoch().toString();
         this.name = name;
         this.surname = surname;
         this.bornDate = bornDate;
@@ -56,16 +59,6 @@ public class PersonOutputDTO {
         return Objects.hash(id, name, surname, bornDate, stack);
     }
 
-    @Override
-    public String toString() {
-        return "PersonOutputDTO{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", surname='" + surname + '\'' +
-                ", bornDate=" + bornDate +
-                ", stack=" + stack +
-                '}';
-    }
 }
 
 

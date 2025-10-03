@@ -27,16 +27,18 @@ public class PersonResource {
         return null;
     }
 
+
+
     @GetMapping
     public ResponseEntity<List<PersonOutputDTO>> getPersons(@RequestParam(name = "t", required = false) String termo){
 
         return null;
     }
 
-    // Falta implementar Endpoint de Contagem.
-
-
-
+    @GetMapping
+    public String count(){
+        return "";
+    }
 
 
 }
