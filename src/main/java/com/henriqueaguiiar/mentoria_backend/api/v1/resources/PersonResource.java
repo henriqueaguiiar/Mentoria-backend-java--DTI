@@ -15,13 +15,6 @@ import java.util.List;
 public class PersonResource {
 
 
-    @GetMapping
-    public String teste(){
-        log.info("Sucesso");
-        return "teste-API";
-    }
-
-
     @PostMapping
     public ResponseEntity<PersonOutputDTO> create(@RequestBody PersonInputDTO person){
         log.info("Pessoa: {} BornDate: {} ", person.getName(), person.getBornDate());
@@ -34,16 +27,18 @@ public class PersonResource {
         return null;
     }
 
+
+
     @GetMapping
     public ResponseEntity<List<PersonOutputDTO>> getPersons(@RequestParam(name = "t", required = false) String termo){
 
         return null;
     }
 
-    // Falta implementar Endpoint de Contagem.
-
-
-
+    @GetMapping
+    public String count(){
+        return "";
+    }
 
 
 }
