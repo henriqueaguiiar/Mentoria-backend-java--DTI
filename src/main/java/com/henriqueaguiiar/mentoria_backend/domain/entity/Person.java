@@ -10,6 +10,7 @@ import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 
+import java.time.LocalDate;
 import java.util.Date;
 import java.util.List;
 import java.util.UUID;
@@ -28,7 +29,7 @@ public class Person {
     @Column(name = "surname")
     private String surname;
     @Column(name = "bornDate")
-    private Date bornDate;
+    private LocalDate bornDate;
     @Column(name = "stack")
     private List<String> stack;
 

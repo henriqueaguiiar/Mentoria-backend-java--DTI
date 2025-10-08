@@ -6,6 +6,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 
+import java.time.LocalDate;
 import java.util.Date;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +23,7 @@ import java.util.Objects;
 public class PersonInputDTO {
     private String name;
     private String surname;
-    private Date bornDate;
+    private LocalDate bornDate;
     private List<String> stack;
 
     @Override

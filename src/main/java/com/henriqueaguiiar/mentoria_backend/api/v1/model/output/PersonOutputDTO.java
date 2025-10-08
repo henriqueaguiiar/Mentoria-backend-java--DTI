@@ -5,6 +5,7 @@ import com.github.f4b6a3.uuid.UuidCreator;
 import lombok.*;
 import org.springframework.beans.factory.annotation.Autowired;
 
+import java.time.LocalDate;
 import java.util.Date;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +26,7 @@ public class PersonOutputDTO {
     private String id;
     private String name;
     private String surname;
-    private Date bornDate;
+    private LocalDate bornDate;
     private List<String> stack;
 
 
@@ -39,7 +40,7 @@ public class PersonOutputDTO {
      */
 
     @Autowired
-    public PersonOutputDTO(String name, String surname, Date bornDate, List<String> stack) {
+    public PersonOutputDTO(String name, String surname, LocalDate bornDate, List<String> stack) {
         this.id = id = UuidCreator.getTimeOrderedEpoch().toString();
         this.name = name;
         this.surname = surname;
